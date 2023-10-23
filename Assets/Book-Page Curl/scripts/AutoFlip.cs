@@ -11,6 +11,7 @@ public class AutoFlip : MonoBehaviour {
     public int AnimationFramesCount = 40;
     bool isFlipping = false;
     // Use this for initialization
+    
     void Start () {
         if (!ControledBook)
             ControledBook = GetComponent<Book>();

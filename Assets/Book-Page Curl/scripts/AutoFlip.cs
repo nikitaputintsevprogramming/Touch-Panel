@@ -173,6 +173,11 @@ public class AutoFlip : MonoBehaviour {
             _point = 0;
             _btnRead.gameObject.SetActive(false);
         }
+        if (ControledBook.currentPage == ControledBook.TotalPageCount - 2)
+        {
+            _rightPart.gameObject.SetActive(false);
+            _scalePos = new Vector2(1100, 800);
+        }
 
         for (int i = 0; i < AnimationFramesCount; i++)
         {
@@ -183,7 +188,9 @@ public class AutoFlip : MonoBehaviour {
             
             x -= dx;
         }
+
         _leftPart.gameObject.SetActive(true);
+
         if (ControledBook.currentPage == 0)
         {
             _contour.SetActive(true);
@@ -192,7 +199,6 @@ public class AutoFlip : MonoBehaviour {
         if (ControledBook.currentPage == ControledBook.TotalPageCount - 2)
         {
             _point = rt.sizeDelta.x / 4;
-            //LeftPart.gameObject.SetActive(false);
         }
 
         ControledBook.ReleasePage();
@@ -203,7 +209,7 @@ public class AutoFlip : MonoBehaviour {
         float y = (-h / (xl * xl)) * (x - xc) * (x - xc);
         ControledBook.DragLeftPageToPoint(new Vector3(x, y, 0));
         if (ControledBook.currentPage == ControledBook.TotalPageCount)
-        { 
+        {
             _point = 0;
         }
         if (ControledBook.currentPage == 2)
@@ -218,15 +224,16 @@ public class AutoFlip : MonoBehaviour {
             yield return new WaitForSeconds(frameTime);
             x += dx;
         }
-
-        
+        if (ControledBook.currentPage == ControledBook.TotalPageCount)
+        {
+            _rightPart.gameObject.SetActive(true);
+            _scalePos = new Vector2(1270, 890);
+        }
         if (ControledBook.currentPage == 2)
         {
             _point = -rt.sizeDelta.x / 4;
             _btnRead.gameObject.SetActive(true);
-
         }
         ControledBook.ReleasePage();
     }
-
 }

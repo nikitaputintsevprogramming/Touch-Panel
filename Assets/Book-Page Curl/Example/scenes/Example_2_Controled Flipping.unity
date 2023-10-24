@@ -149,7 +149,7 @@ PrefabInstance:
     - target: {fileID: 11403584, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5eed5e2c7a24cf04e8cd593f4d5676c1, type: 3}
+      objectReference: {fileID: 21300000, guid: b0741f5b2122ff7408a2237ce879ddf3, type: 3}
     - target: {fileID: 11403584, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_UseSpriteMesh
       value: 1
@@ -164,12 +164,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.size
-      value: 8
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: b1bac3987b1ad064a80f72496ee46425, type: 3}
+      objectReference: {fileID: 21300000, guid: b0741f5b2122ff7408a2237ce879ddf3, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[1]
       value: 
@@ -181,23 +181,63 @@ PrefabInstance:
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: b85050c83db242e4eafba8f57eb350d9, type: 3}
+      objectReference: {fileID: 21300000, guid: d71c7c31d6493de42b383f2a07cd7628, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: b0c18c676ab4d4343adc234472e1d618, type: 3}
+      objectReference: {fileID: 21300000, guid: 7b765a5f06ee0ef4f8ed80d99bb401dc, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[5]
       value: 
-      objectReference: {fileID: 21300000, guid: 86cccff4f962a034c841b8a741b9d50b, type: 3}
+      objectReference: {fileID: 21300000, guid: 477986b1ff06d664b9aa38ce5a073e3b, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[6]
       value: 
-      objectReference: {fileID: 21300000, guid: 9ad9c7be1dcdd6d45ab6e643fc600a88, type: 3}
+      objectReference: {fileID: 21300000, guid: 966ecf56f27629547891fb1305941130, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[7]
       value: 
-      objectReference: {fileID: 21300000, guid: a8371807677c9624f95debc13138fe33, type: 3}
+      objectReference: {fileID: 21300000, guid: a99f8bcca36392a41a77683cacb12907, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: bookPages.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: e13a709cdb716db49ba6183d92f9f5fb, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: bookPages.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: e05296699dcc0fa4284bc322fb3c76d0, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: bookPages.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4437bc73fc5528e45a28408c5100f341, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: bookPages.Array.data[11]
+      value: 
+      objectReference: {fileID: 21300000, guid: d5368e72298f93e4e9940f954763c65b, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: bookPages.Array.data[12]
+      value: 
+      objectReference: {fileID: 21300000, guid: fe7947114dd99164ba4c40e06fbb43a2, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: bookPages.Array.data[13]
+      value: 
+      objectReference: {fileID: 21300000, guid: bc4119c8de1a1b44ebb2c0e9404742e4, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: bookPages.Array.data[14]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3220f83883e33d84689ee015439d3554, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: bookPages.Array.data[15]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6f5768aaa368ace4ca44f52462cc1e5f, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: bookPages.Array.data[16]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6983717b7bb6d6a49966ae5c78358025, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: bookPages.Array.data[17]
+      value: 
+      objectReference: {fileID: 21300000, guid: a14f4d572d1a2674a86274d6edb3b629, type: 3}
     - target: {fileID: 11430880, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -554,6 +594,8 @@ MonoBehaviour:
   _btnLeft: {fileID: 2023777105}
   _leftPart: {fileID: 1573978695}
   _rightPart: {fileID: 967351119}
+  _speedForScale: 15
+  _contour: {fileID: 1239226793}
 --- !u!1 &1014177704
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,7 +1024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1239226794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -990,7 +1032,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239226793}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1000,8 +1042,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18, y: 0}
-  m_SizeDelta: {x: 1325, y: 890}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1239226795
 MonoBehaviour:

@@ -204,6 +204,7 @@ public class AutoFlip : MonoBehaviour {
         if (ControledBook.currentPage == 2)
         { 
             _leftPart.gameObject.SetActive(false);
+            _scalePos = new Vector2(1100, 800);
             
         }
         for (int i = 0; i < AnimationFramesCount; i++)

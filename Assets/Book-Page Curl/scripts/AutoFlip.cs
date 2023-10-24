@@ -24,6 +24,9 @@ public class AutoFlip : MonoBehaviour {
 
     [SerializeField] private GameObject _leftPart;
     [SerializeField] private GameObject _rightPart;
+    private Vector2 _scalePos;
+    [SerializeField] private float _speedForScale;
+    [SerializeField] private GameObject _contour;
 
 
     void Start()
@@ -49,12 +52,18 @@ public class AutoFlip : MonoBehaviour {
     private void Update()
     {
         CentredCover();
-        print(_point);
+        ContourCover();
     }
     public void CentredCover()
     {
         float speedPoint = _speedForPoint * Time.deltaTime;
         rt.anchoredPosition = Vector2.Lerp(rt.anchoredPosition, new Vector2(_point, 0), speedPoint);
+    }
+    public void ContourCover()
+    {
+        _contour.SetActive(true);
+        float speedPoint = _speedForScale * Time.deltaTime;
+        _contour.GetComponent<RectTransform>().sizeDelta = Vector2.Lerp(_contour.GetComponent<RectTransform>().sizeDelta, _scalePos, speedPoint);
     }
     void PageFlipped()
     {
@@ -160,6 +169,7 @@ public class AutoFlip : MonoBehaviour {
             _point = 0;
             _btnRead.gameObject.SetActive(false);
         }
+
         for (int i = 0; i < AnimationFramesCount; i++)
         {
             y = (-h / (xl * xl)) * (x - xc) * (x - xc);
@@ -170,6 +180,10 @@ public class AutoFlip : MonoBehaviour {
             x -= dx;
         }
         _leftPart.gameObject.SetActive(true);
+        if (ControledBook.currentPage == 0)
+        {
+            _scalePos = new Vector2(1270, 890);
+        }
         if (ControledBook.currentPage == ControledBook.TotalPageCount - 2)
         {
             _point = rt.sizeDelta.x / 4;

@@ -61,7 +61,11 @@ public class AutoFlip : MonoBehaviour {
     }
     public void ContourCover()
     {
-        _contour.SetActive(true);
+        if(_contour.GetComponent<RectTransform>().sizeDelta.y <= 850)
+            _contour.SetActive(false);
+        else
+            _contour.SetActive(true);
+
         float speedPoint = _speedForScale * Time.deltaTime;
         _contour.GetComponent<RectTransform>().sizeDelta = Vector2.Lerp(_contour.GetComponent<RectTransform>().sizeDelta, _scalePos, speedPoint);
     }
@@ -182,6 +186,7 @@ public class AutoFlip : MonoBehaviour {
         _leftPart.gameObject.SetActive(true);
         if (ControledBook.currentPage == 0)
         {
+            _contour.SetActive(true);
             _scalePos = new Vector2(1270, 890);
         }
         if (ControledBook.currentPage == ControledBook.TotalPageCount - 2)
@@ -202,10 +207,9 @@ public class AutoFlip : MonoBehaviour {
             _point = 0;
         }
         if (ControledBook.currentPage == 2)
-        { 
+        {
             _leftPart.gameObject.SetActive(false);
             _scalePos = new Vector2(1100, 800);
-            
         }
         for (int i = 0; i < AnimationFramesCount; i++)
         {
@@ -214,6 +218,8 @@ public class AutoFlip : MonoBehaviour {
             yield return new WaitForSeconds(frameTime);
             x += dx;
         }
+
+        
         if (ControledBook.currentPage == 2)
         {
             _point = -rt.sizeDelta.x / 4;

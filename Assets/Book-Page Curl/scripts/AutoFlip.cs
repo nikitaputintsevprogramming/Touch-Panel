@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 [RequireComponent(typeof(Book))]
 public class AutoFlip : MonoBehaviour {
     public FlipMode Mode;
@@ -13,13 +15,34 @@ public class AutoFlip : MonoBehaviour {
     // Use this for initialization
 
     private RectTransform rt;
-    private float _point ;
+    private float _point;
     [SerializeField] private float _speedForPoint;
+    [SerializeField] private Button _btnRead;
+    [SerializeField] private Button _btnClose;
+    [SerializeField] private Button _btnRight;
+    [SerializeField] private Button _btnLeft;
+
+    [SerializeField] private GameObject _leftPart;
+    [SerializeField] private GameObject _rightPart;
+
+    [SerializeField] private GameObject _frontCover;
+    [SerializeField] private GameObject _firstPage;
+
+
+
 
     void Start()
     {
         rt = transform.GetComponent<RectTransform>();
         _point = -rt.sizeDelta.x / 4;
+        rt.anchoredPosition = new Vector2(_point, 0);
+        _leftPart.gameObject.SetActive(false);
+
+
+        _btnClose.gameObject.SetActive(false);
+        _btnRight.gameObject.SetActive(false);
+        _btnLeft.gameObject.SetActive(false);
+        _btnRead.gameObject.SetActive(true);
 
         if (!ControledBook)
             ControledBook = GetComponent<Book>();
@@ -34,7 +57,6 @@ public class AutoFlip : MonoBehaviour {
     }
     public void CentredCover()
     {
-        //rt.anchoredPosition = new Vector2(point, 0);
         float speedPoint = _speedForPoint * Time.deltaTime;
         rt.anchoredPosition = Vector2.Lerp(rt.anchoredPosition, new Vector2(_point, 0), speedPoint);
     }
@@ -66,7 +88,6 @@ public class AutoFlip : MonoBehaviour {
     }
     public void FlipLeftPage()
     {
-
         if (isFlipping) return;
         if (ControledBook.currentPage <= 0)
         {
@@ -81,6 +102,15 @@ public class AutoFlip : MonoBehaviour {
         float h = Mathf.Abs(ControledBook.EndBottomRight.y) * 0.9f;
         float dx = (xl) * 2 / AnimationFramesCount;
         StartCoroutine(FlipLTR(xc, xl, h, frameTime, dx));
+    }
+    public void StartRead()
+    {
+        _btnClose.gameObject.SetActive(true);
+        _btnRight.gameObject.SetActive(true);
+        _btnLeft.gameObject.SetActive(true);
+        _btnRead.gameObject.SetActive(false);
+
+        FlipRightPage();
     }
     IEnumerator FlipToEnd()
     {
@@ -132,6 +162,7 @@ public class AutoFlip : MonoBehaviour {
         if (ControledBook.currentPage == 0)
         {
             _point = 0;
+            _btnRead.gameObject.SetActive(false);
         }
         for (int i = 0; i < AnimationFramesCount; i++)
         {
@@ -142,9 +173,11 @@ public class AutoFlip : MonoBehaviour {
             
             x -= dx;
         }
+        _leftPart.gameObject.SetActive(true);
         if (ControledBook.currentPage == ControledBook.TotalPageCount - 2)
         {
             _point = rt.sizeDelta.x / 4;
+            //LeftPart.gameObject.SetActive(false);
         }
 
         ControledBook.ReleasePage();
@@ -158,6 +191,10 @@ public class AutoFlip : MonoBehaviour {
         { 
             _point = 0;
         }
+        if (ControledBook.currentPage == 2)
+        { 
+            _leftPart.gameObject.SetActive(false);
+        }
         for (int i = 0; i < AnimationFramesCount; i++)
         {
             y = (-h / (xl * xl)) * (x - xc) * (x - xc);
@@ -168,6 +205,7 @@ public class AutoFlip : MonoBehaviour {
         if (ControledBook.currentPage == 2)
         {
             _point = -rt.sizeDelta.x / 4;
+            _btnRead.gameObject.SetActive(true);
         }
         ControledBook.ReleasePage();
     }

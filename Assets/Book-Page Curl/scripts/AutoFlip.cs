@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Book))]
 public class AutoFlip : MonoBehaviour {
@@ -68,6 +69,10 @@ public class AutoFlip : MonoBehaviour {
 
         float speedPoint = _speedForScale * Time.deltaTime;
         _contour.GetComponent<RectTransform>().sizeDelta = Vector2.Lerp(_contour.GetComponent<RectTransform>().sizeDelta, _scalePos, speedPoint);
+    }
+    public void CloseButton()
+    {
+        SceneManager.LoadScene(0);
     }
     void PageFlipped()
     {
@@ -172,6 +177,9 @@ public class AutoFlip : MonoBehaviour {
         {
             _point = 0;
             _btnRead.gameObject.SetActive(false);
+            _btnClose.gameObject.SetActive(true);
+            _btnRight.gameObject.SetActive(true);
+            _btnLeft.gameObject.SetActive(true);
         }
         if (ControledBook.currentPage == ControledBook.TotalPageCount - 2)
         {
@@ -233,6 +241,9 @@ public class AutoFlip : MonoBehaviour {
         {
             _point = -rt.sizeDelta.x / 4;
             _btnRead.gameObject.SetActive(true);
+            _btnClose.gameObject.SetActive(false);
+            _btnRight.gameObject.SetActive(false);
+            _btnLeft.gameObject.SetActive(false);
         }
         ControledBook.ReleasePage();
     }

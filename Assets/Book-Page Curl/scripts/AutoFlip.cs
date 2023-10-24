@@ -25,15 +25,6 @@ public class AutoFlip : MonoBehaviour {
     [SerializeField] private GameObject _leftPart;
     [SerializeField] private GameObject _rightPart;
 
-    [SerializeField] private GameObject _frontCover;
-    [SerializeField] private GameObject _firstPage;
-    [SerializeField] private GameObject _secondPage;
-
-    [SerializeField] private GameObject _TitleOnFirstPage;
-    [SerializeField] private GameObject _TitleOnSecondPage;
-    [SerializeField] private GameObject _ContentOnFirstPage;
-    [SerializeField] private GameObject _ContentOnSecondPage;
-
 
     void Start()
     {
@@ -41,7 +32,6 @@ public class AutoFlip : MonoBehaviour {
         _point = -rt.sizeDelta.x / 4;
         rt.anchoredPosition = new Vector2(_point, 0);
         _leftPart.gameObject.SetActive(false);
-        _secondPage.gameObject.SetActive(false);
 
 
         _btnClose.gameObject.SetActive(false);
@@ -169,8 +159,6 @@ public class AutoFlip : MonoBehaviour {
         {
             _point = 0;
             _btnRead.gameObject.SetActive(false);
-            _frontCover.gameObject.SetActive(false);
-            _secondPage.gameObject.SetActive(true);
         }
         for (int i = 0; i < AnimationFramesCount; i++)
         {
@@ -215,15 +203,9 @@ public class AutoFlip : MonoBehaviour {
         {
             _point = -rt.sizeDelta.x / 4;
             _btnRead.gameObject.SetActive(true);
-            _frontCover.gameObject.SetActive(true);
-            _secondPage.gameObject.SetActive(false);
 
         }
         ControledBook.ReleasePage();
     }
 
-    private void ChangeContent()
-    {
-        
-    }
 }

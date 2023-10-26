@@ -35,7 +35,6 @@ public class AutoFlip : MonoBehaviour {
     [SerializeField] private GameObject _buttonVideo3;
     [SerializeField] private GameObject _buttonVideo4;
 
-
     void Start()
     {
         rt = transform.GetComponent<RectTransform>();
@@ -206,10 +205,10 @@ public class AutoFlip : MonoBehaviour {
         }
 
         _leftPart.gameObject.SetActive(true);
-        EnableVideoButtons(ControledBook.currentPage >= 486 && ControledBook.currentPage <= 490,
-            ControledBook.currentPage >= 484 && ControledBook.currentPage <= 490,
-            ControledBook.currentPage >= 484 && ControledBook.currentPage <= 490,
-            ControledBook.currentPage >= 484 && ControledBook.currentPage <= 490);
+        EnableVideoButtons(ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56,
+            ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56,
+            ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56,
+            ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56);
 
         if (ControledBook.currentPage == 0)
         {
@@ -259,18 +258,18 @@ public class AutoFlip : MonoBehaviour {
             _btnRight.gameObject.SetActive(false);
             _btnLeft.gameObject.SetActive(false);
         }
-        EnableVideoButtons(ControledBook.currentPage >= 486 && ControledBook.currentPage <= 490,
-             ControledBook.currentPage >= 484 && ControledBook.currentPage <= 490,
-             ControledBook.currentPage >= 484 && ControledBook.currentPage <= 490,
-             ControledBook.currentPage >= 484 && ControledBook.currentPage <= 490);
+        EnableVideoButtons(ControledBook.currentPage >= 56 && ControledBook.currentPage <= 60,
+             ControledBook.currentPage >= 60 && ControledBook.currentPage <= 60,
+             ControledBook.currentPage >= 60 && ControledBook.currentPage <= 60,
+             ControledBook.currentPage >= 60 && ControledBook.currentPage <= 60);
         ControledBook.ReleasePage();
     }
 
     public void EnableVideoButtons(bool enable1, bool enable2, bool enable3, bool enable4)
     {
         _buttonVideo1.SetActive(enable1);
-        _buttonVideo1.SetActive(enable2);
-        _buttonVideo1.SetActive(enable3);
-        _buttonVideo1.SetActive(enable4);
+        _buttonVideo2.SetActive(enable2);
+        _buttonVideo3.SetActive(enable3);
+        _buttonVideo4.SetActive(enable4);
     }
 }

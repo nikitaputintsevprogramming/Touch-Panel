@@ -51,6 +51,7 @@ public class AutoFlip : MonoBehaviour {
 
         if (!ControledBook)
             ControledBook = GetComponent<Book>();
+            ControledBook.interactable = false;
         if (AutoStartFlip)
             StartFlipping();
         ControledBook.OnFlip.AddListener(new UnityEngine.Events.UnityAction(PageFlipped));
@@ -175,6 +176,7 @@ public class AutoFlip : MonoBehaviour {
     IEnumerator FlipRTL(float xc, float xl, float h, float frameTime, float dx)
     {
         EnableVideoButtons(false, false, false, false);
+        ControledBook.interactable = false;
 
         float x = xc + xl;
         float y = (-h / (xl * xl)) * (x - xc) * (x - xc);
@@ -203,7 +205,7 @@ public class AutoFlip : MonoBehaviour {
             
             x -= dx;
         }
-
+        ControledBook.interactable = true;
         _leftPart.gameObject.SetActive(true);
         EnableVideoButtons(ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56,
             ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56,
@@ -225,7 +227,7 @@ public class AutoFlip : MonoBehaviour {
     IEnumerator FlipLTR(float xc, float xl, float h, float frameTime, float dx)
     {
         EnableVideoButtons(false, false, false, false);
-
+        ControledBook.interactable = false;
         float x = xc - xl;
         float y = (-h / (xl * xl)) * (x - xc) * (x - xc);
         ControledBook.DragLeftPageToPoint(new Vector3(x, y, 0));
@@ -263,6 +265,7 @@ public class AutoFlip : MonoBehaviour {
              ControledBook.currentPage >= 60 && ControledBook.currentPage <= 60,
              ControledBook.currentPage >= 60 && ControledBook.currentPage <= 60);
         ControledBook.ReleasePage();
+        ControledBook.interactable = true;
     }
 
     public void EnableVideoButtons(bool enable1, bool enable2, bool enable3, bool enable4)

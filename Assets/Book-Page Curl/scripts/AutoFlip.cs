@@ -28,6 +28,12 @@ public class AutoFlip : MonoBehaviour {
     private Vector2 _scalePos;
     [SerializeField] private float _speedForScale;
     [SerializeField] private GameObject _contour;
+    [SerializeField] private Vector2 _contourWidth;
+
+    [SerializeField] private GameObject _buttonVideo1;
+    [SerializeField] private GameObject _buttonVideo2;
+    [SerializeField] private GameObject _buttonVideo3;
+    [SerializeField] private GameObject _buttonVideo4;
 
 
     void Start()
@@ -169,6 +175,8 @@ public class AutoFlip : MonoBehaviour {
     }
     IEnumerator FlipRTL(float xc, float xl, float h, float frameTime, float dx)
     {
+        EnableVideoButtons(false, false, false, false);
+
         float x = xc + xl;
         float y = (-h / (xl * xl)) * (x - xc) * (x - xc);
 
@@ -198,11 +206,15 @@ public class AutoFlip : MonoBehaviour {
         }
 
         _leftPart.gameObject.SetActive(true);
+        EnableVideoButtons(ControledBook.currentPage >= 486 && ControledBook.currentPage <= 490,
+            ControledBook.currentPage >= 484 && ControledBook.currentPage <= 490,
+            ControledBook.currentPage >= 484 && ControledBook.currentPage <= 490,
+            ControledBook.currentPage >= 484 && ControledBook.currentPage <= 490);
 
         if (ControledBook.currentPage == 0)
         {
             _contour.SetActive(true);
-            _scalePos = new Vector2(1270, 890);
+            _scalePos = _contourWidth;
         }
         if (ControledBook.currentPage == ControledBook.TotalPageCount - 2)
         {
@@ -213,6 +225,8 @@ public class AutoFlip : MonoBehaviour {
     }
     IEnumerator FlipLTR(float xc, float xl, float h, float frameTime, float dx)
     {
+        EnableVideoButtons(false, false, false, false);
+
         float x = xc - xl;
         float y = (-h / (xl * xl)) * (x - xc) * (x - xc);
         ControledBook.DragLeftPageToPoint(new Vector3(x, y, 0));
@@ -235,7 +249,7 @@ public class AutoFlip : MonoBehaviour {
         if (ControledBook.currentPage == ControledBook.TotalPageCount)
         {
             _rightPart.gameObject.SetActive(true);
-            _scalePos = new Vector2(1270, 890);
+            _scalePos = _contourWidth;
         }
         if (ControledBook.currentPage == 2)
         {
@@ -245,6 +259,18 @@ public class AutoFlip : MonoBehaviour {
             _btnRight.gameObject.SetActive(false);
             _btnLeft.gameObject.SetActive(false);
         }
+        EnableVideoButtons(ControledBook.currentPage >= 486 && ControledBook.currentPage <= 490,
+             ControledBook.currentPage >= 484 && ControledBook.currentPage <= 490,
+             ControledBook.currentPage >= 484 && ControledBook.currentPage <= 490,
+             ControledBook.currentPage >= 484 && ControledBook.currentPage <= 490);
         ControledBook.ReleasePage();
+    }
+
+    public void EnableVideoButtons(bool enable1, bool enable2, bool enable3, bool enable4)
+    {
+        _buttonVideo1.SetActive(enable1);
+        _buttonVideo1.SetActive(enable2);
+        _buttonVideo1.SetActive(enable3);
+        _buttonVideo1.SetActive(enable4);
     }
 }

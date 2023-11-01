@@ -16212,6 +16212,7 @@ GameObject:
   - component: {fileID: 1504805618}
   - component: {fileID: 1504805617}
   - component: {fileID: 1504805616}
+  - component: {fileID: 1504805620}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -16307,6 +16308,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1504805620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504805615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9470f69e297bd9f4bb1a21a728e0c21b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "_the\u0421lockIsTicking": 0
+  _OnShitTheTimeIsReset: 0
+  _timeForAlahAkbar: 120
 --- !u!1 &1573978695 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 128206, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}

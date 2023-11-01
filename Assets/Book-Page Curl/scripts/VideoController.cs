@@ -19,8 +19,8 @@ public class VideoController : MonoBehaviour
     {
         _video1.gameObject.SetActive(enable);
 
-        //if(ControledBook.currentPage == 490)
-        //    _video1.clip = clips[3];
+        if (ControledBook.currentPage == 40)
+            _video1.clip = clips[0];
         //if (ControledBook.currentPage == 492)
         //    _video1.clip = clips[7];
         //if (ControledBook.currentPage == 494)
@@ -30,10 +30,10 @@ public class VideoController : MonoBehaviour
     public void Video2Enable(bool enable)
     {
         _video2.gameObject.SetActive(enable);
-        //if (ControledBook.currentPage == 488)
-        //    _video2.clip = clips[0];
-        //if (ControledBook.currentPage == 490)
-        //    _video2.clip = clips[4];
+        if (ControledBook.currentPage == 38)
+            _video2.clip = clips[1];
+        if (ControledBook.currentPage == 40)
+            _video2.clip = clips[2];
         //if (ControledBook.currentPage == 492)
         //    _video2.clip = clips[8];
         //if (ControledBook.currentPage == 494)
@@ -42,10 +42,10 @@ public class VideoController : MonoBehaviour
     public void Video3Enable(bool enable)
     {
         _video3.gameObject.SetActive(enable);
-        //if (ControledBook.currentPage == 488)
-        //    _video3.clip = clips[1];
-        //if (ControledBook.currentPage == 490)
-        //    _video3.clip = clips[5];
+        if (ControledBook.currentPage == 38)
+            _video3.clip = clips[3];
+        if (ControledBook.currentPage == 40)
+            _video3.clip = clips[4];
         //if (ControledBook.currentPage == 492)
         //    _video3.clip = clips[9];
         //if (ControledBook.currentPage == 494)
@@ -54,10 +54,10 @@ public class VideoController : MonoBehaviour
     public void Video4Enable(bool enable)
     {
         _video4.gameObject.SetActive(enable);
-        //if (ControledBook.currentPage == 488)
-        //    _video4.clip = clips[2];
-        //if (ControledBook.currentPage == 490)
-        //    _video4.clip = clips[6];
+        if (ControledBook.currentPage == 38)
+            _video4.clip = clips[5];
+        if (ControledBook.currentPage == 40)
+            _video4.clip = clips[6];
         //if (ControledBook.currentPage == 492)
         //    _video4.clip = clips[10];
         //if (ControledBook.currentPage == 494)

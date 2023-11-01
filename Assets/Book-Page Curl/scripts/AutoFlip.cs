@@ -212,10 +212,10 @@ public class AutoFlip : MonoBehaviour {
         }
         ControledBook.interactable = true;
         _leftPart.gameObject.SetActive(true);
-        EnableVideoButtons(ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56,
-            ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56,
-            ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56,
-            ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56);
+        EnableVideoButtons(ControledBook.currentPage >= 38 && ControledBook.currentPage <= 38,
+            ControledBook.currentPage >= 36 && ControledBook.currentPage <= 38,
+            ControledBook.currentPage >= 36 && ControledBook.currentPage <= 38,
+            ControledBook.currentPage >= 36 && ControledBook.currentPage <= 38);
 
         if (ControledBook.currentPage == 0)
         {
@@ -266,10 +266,10 @@ public class AutoFlip : MonoBehaviour {
             _btnRight.gameObject.SetActive(false);
             _btnLeft.gameObject.SetActive(false);
         }
-        EnableVideoButtons(ControledBook.currentPage >= 56 && ControledBook.currentPage <= 60,
-             ControledBook.currentPage >= 60 && ControledBook.currentPage <= 60,
-             ControledBook.currentPage >= 60 && ControledBook.currentPage <= 60,
-             ControledBook.currentPage >= 60 && ControledBook.currentPage <= 60);
+        EnableVideoButtons(ControledBook.currentPage >= 42 && ControledBook.currentPage <= 42,
+             ControledBook.currentPage >= 40 && ControledBook.currentPage <= 42,
+             ControledBook.currentPage >= 40 && ControledBook.currentPage <= 42,
+             ControledBook.currentPage >= 40 && ControledBook.currentPage <= 42);
         ControledBook.ReleasePage();
         ControledBook.interactable = true;
     }

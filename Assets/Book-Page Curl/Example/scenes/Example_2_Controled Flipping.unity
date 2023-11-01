@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &172673502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -662,6 +662,10 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1504805618}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: currentPage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: interactable
       value: 0
@@ -16011,7 +16015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1462077467
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16422,7 +16426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1752776670
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16881,7 +16885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2027434993
 RectTransform:
   m_ObjectHideFlags: 0

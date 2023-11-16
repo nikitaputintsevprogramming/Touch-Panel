@@ -212,7 +212,7 @@ public class AutoFlip : MonoBehaviour {
         }
         ControledBook.interactable = true;
         _leftPart.gameObject.SetActive(true);
-        EnableVideoButtons(ControledBook.currentPage >= 36 && ControledBook.currentPage <= 38,
+        EnableVideoButtons(ControledBook.currentPage >= 38 && ControledBook.currentPage <= 38,
             ControledBook.currentPage >= 36 && ControledBook.currentPage <= 38,
             ControledBook.currentPage >= 36 && ControledBook.currentPage <= 38,
             ControledBook.currentPage >= 36 && ControledBook.currentPage <= 36);
@@ -266,7 +266,7 @@ public class AutoFlip : MonoBehaviour {
             _btnRight.gameObject.SetActive(false);
             _btnLeft.gameObject.SetActive(false);
         }
-        EnableVideoButtons(ControledBook.currentPage >= 40 && ControledBook.currentPage <= 42,
+        EnableVideoButtons(ControledBook.currentPage >= 42 && ControledBook.currentPage <= 42,
              ControledBook.currentPage >= 40 && ControledBook.currentPage <= 42,
              ControledBook.currentPage >= 40 && ControledBook.currentPage <= 42,
              ControledBook.currentPage >= 40 && ControledBook.currentPage <= 40);

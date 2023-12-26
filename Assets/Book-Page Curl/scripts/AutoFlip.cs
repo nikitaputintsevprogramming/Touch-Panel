@@ -215,7 +215,7 @@ public class AutoFlip : MonoBehaviour {
         EnableVideoButtons(ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56,
             ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56,
             ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56,
-            ControledBook.currentPage >= 56 && ControledBook.currentPage <= 56);
+            false);
 
         if (ControledBook.currentPage == 0)
         {
@@ -269,7 +269,7 @@ public class AutoFlip : MonoBehaviour {
         EnableVideoButtons(ControledBook.currentPage >= 56 && ControledBook.currentPage <= 60,
              ControledBook.currentPage >= 60 && ControledBook.currentPage <= 60,
              ControledBook.currentPage >= 60 && ControledBook.currentPage <= 60,
-             ControledBook.currentPage >= 60 && ControledBook.currentPage <= 60);
+             false);
         ControledBook.ReleasePage();
         ControledBook.interactable = true;
     }

@@ -1336,3 +1336,6 @@ Assets/Video/Машук/SDE_MAIN_TINY.mp4
 *.mp4
 *.meta
 *.mp4
+*.unity
+Assets/Book-Page Curl/Example/scenes/Example_2_Controled Flipping.unity
+*.unity

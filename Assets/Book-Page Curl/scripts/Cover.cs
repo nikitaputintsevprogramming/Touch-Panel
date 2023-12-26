@@ -10,9 +10,13 @@ public class Cover : MonoBehaviour
 
     private RectTransform rt;
 
+    //[SerializeField] private GameObject _leftLogo;
+    //[SerializeField] private GameObject _rightLogo;
+
     void Start()
     {
         rt = transform.GetComponent<RectTransform>();
+
     }
 
     private void Update()
@@ -20,14 +24,20 @@ public class Cover : MonoBehaviour
         if (ControledBook.currentPage <= 0)
         {
             CentredCover(-rt.sizeDelta.x / 4);
+            //_leftLogo.SetActive(true);
+            //_rightLogo.SetActive(true);
         }
         else if (ControledBook.currentPage >= ControledBook.bookPages.Length)
         {
             CentredCover(rt.sizeDelta.x / 4);
+            //_leftLogo.SetActive(true);
+            //_rightLogo.SetActive(true);
         }
         else
         {
             CentredCover(0);
+            //_leftLogo.SetActive(false);
+            //_rightLogo.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.W))

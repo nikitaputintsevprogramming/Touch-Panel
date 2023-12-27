@@ -31,7 +31,7 @@ public class AutoFlip : MonoBehaviour {
     [SerializeField] private Vector2 _contourWidth;
 
     [SerializeField] private GameObject _panelBg;
-    //[SerializeField] private Sprite[] _bg;
+    [SerializeField] private Sprite[] _bg;
 
 
     [SerializeField] private GameObject _buttonVideo1;
@@ -193,7 +193,7 @@ public class AutoFlip : MonoBehaviour {
             _btnClose.gameObject.SetActive(true);
             _btnRight.gameObject.SetActive(true);
             _btnLeft.gameObject.SetActive(true);
-            //_panelBg.GetComponent<Image>().sprite = _bg[1];
+            _panelBg.GetComponent<Image>().sprite = _bg[1];
         }
         if (ControledBook.currentPage == ControledBook.TotalPageCount - 2)
         {
@@ -242,7 +242,7 @@ public class AutoFlip : MonoBehaviour {
         }
         if (ControledBook.currentPage == 2)
         {
-            //_panelBg.GetComponent<Image>().sprite = _bg[0];
+            _panelBg.GetComponent<Image>().sprite = _bg[0];
             _leftPart.gameObject.SetActive(false);
             _scalePos = new Vector2(1100, 800);
         }

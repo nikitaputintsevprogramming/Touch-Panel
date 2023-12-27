@@ -672,7 +672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.size
-      value: 58
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[0]
@@ -15309,6 +15309,9 @@ MonoBehaviour:
   _contour: {fileID: 1239226793}
   _contourWidth: {x: 1270, y: 950}
   _panelBg: {fileID: 1168130806}
+  _bg:
+  - {fileID: 21300000, guid: 308b2af46aba15540974c375e0f2eb88, type: 3}
+  - {fileID: 21300000, guid: 4990d059ca333b84c9c3ece86e8fc51f, type: 3}
   _buttonVideo1: {fileID: 2027434992}
   _buttonVideo2: {fileID: 1752776669}
   _buttonVideo3: {fileID: 1462077466}
@@ -15586,7 +15589,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6b3ad8e4400e3804ba633ac5589fb38a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 308b2af46aba15540974c375e0f2eb88, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16612,7 +16615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1766397147
 RectTransform:
   m_ObjectHideFlags: 0

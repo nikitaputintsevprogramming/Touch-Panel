@@ -15310,7 +15310,7 @@ MonoBehaviour:
   _contourWidth: {x: 1270, y: 950}
   _panelBg: {fileID: 1168130806}
   _bg:
-  - {fileID: 21300000, guid: 4990d059ca333b84c9c3ece86e8fc51f, type: 3}
+  - {fileID: 21300000, guid: bf82f73cb7dac5740ab64839d8c7596b, type: 3}
   - {fileID: 21300000, guid: 308b2af46aba15540974c375e0f2eb88, type: 3}
   _buttonVideo1: {fileID: 2027434992}
   _buttonVideo2: {fileID: 1752776669}
@@ -15589,7 +15589,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4990d059ca333b84c9c3ece86e8fc51f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf82f73cb7dac5740ab64839d8c7596b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
